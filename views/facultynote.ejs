@@ -24,7 +24,7 @@
       <%}%>
     <h2 style="margin-left: 50px; font-family:Georgia, 'Times New Roman', Times, serif; font-weight: bold; font-size: x-large;">Upload Notes</h2>  
     <form action="/facultynote" method="POST" enctype="multipart/form-data">  
-        <div class="container2">
+        <div class="container2" style="overflow-x: auto;">
             <table class="table">
               <tr>
                   <td style="width: 40%;">
@@ -70,7 +70,7 @@
     </form>  <hr>
     <form action="/facultynote" ><br>
         <p style="margin-left: 50px; font-family:Georgia, 'Times New Roman', Times, serif; font-weight: bold; font-size: x-large;">Uploaded Notes</p>
-            <div class="container2">
+            <div class="container2" style="overflow-x: auto;">
                 <%if(data.length>0){%>
                 <% for(var i=0; i < data.length; i++) { %>  
                     <hr>
