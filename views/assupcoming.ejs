@@ -31,17 +31,23 @@
       <div class="container2" style="overflow-x:auto;">
         <%if(data.length>0){%>
         <%for(var i=0;i<data.length;i++){%>
+          <hr>
           <table class="table" style="width: 100%;" id="table<%= data[i].assPath%>" style="word-wrap: break-word;">
            <thead>
+             <tr>
+               <td>
+                 <i class="fas fa-calendar-alt"></i><%= data[i].date%></hr></td>
+                 <td colspan="2" style="text-align: center;"> 
+                  <% if(data[i].due_allowed=="on"){%>
+                    <label style=" color: red;">**Submission is not allowed after due date</label>
+                    <%}%> 
+                 </td>
+                <td colspan="2" style="text-align: center;"> Due Date : <%= data[i].due_date%> </td>
+             </tr>
              <tr>
                <td style="width: 15%; border-right-style: groove; background-image: linear-gradient(to right,  #ccffcc 99%,#ffffff 1% )">
                 <label for="sub<%= data[i].assPath%>"><%= data[i].subject%></label>
                </td>
-               <hr><i class="fas fa-calendar-alt"></i><%= data[i].date%></hr>
-               <label style="margin-left: 30%;">Due Date : <%= data[i].due_date%></label>
-               <% if(data[i].due_allowed=="on"){%>
-                <label style="margin-left: 20%; color: red;">**Submission is not allowed after due date</label>
-                <%}%>
                <%if(data[i].message==null | data[i].message==""){%>
                <td style="width: 15%; border-right-style: groove;">
                 No message 
