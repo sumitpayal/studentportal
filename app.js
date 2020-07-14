@@ -30,7 +30,7 @@ var FacultyName;
 var FacultyId; 
 var teacher_subject_arrray=[];
 
-mongoose.connect('mongodb+srv://StudentPortalCdac:S7@23094094@cluster0.jvr0c.mongodb.net/student?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://<username>:<password>cluster0.jvr0c.mongodb.net/student?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
 const app = express();
 
