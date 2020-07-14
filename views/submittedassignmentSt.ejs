@@ -1,8 +1,8 @@
 <%-include('partials/stheader')%>
 <head>
-   <meta charset="utf-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-       <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <title>Assignment</title>
     <link rel="stylesheet" type="text/css"  href="css/stylesheet.css">
 </head>
@@ -27,15 +27,22 @@
                 <p class="card-text" style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;"><%= message%></p>
               </div> 
             </div> 
-        <%}%>
-
+        <%}%> 
         <%if(data.length>0){%>
-        <%for(var i=0;i<data.length;i++){%>
-            <hr><i class="fas fa-calendar-alt"></i><%= data[i].date%></hr>
-            <label style="margin-left: 35%;">Due Date : <%= data[i].due_date%></label>
-            <label style="margin-left: 25%;">Submitted Date : <%= data[i].submit_date%></label>
+        <%for(var i=0;i<data.length;i++){%> 
+          <hr>
             <table class="table" style="word-wrap: break-word;">
                 <thead>
+                  <tr>
+                    <td colspan="2">
+                      <i class="fas fa-calendar-alt"></i><%= data[i].date%>
+                    </td>
+                    <td colspan="3" style="text-align: center;">
+                       Due Date : <%= data[i].due_date%> 
+                    </td>
+                    <td colspan="3" style="text-align: center;"> Submitted Date : <%= data[i].submit_date%> 
+                    </td>
+                  </tr>
                     <tr>
                         <td style="width: 18%; border-right: groove; background-image: linear-gradient(to right, #ccffcc 100% ,#ffffff 20%);">
                             <%= data[i].subject%>
