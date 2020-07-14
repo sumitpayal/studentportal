@@ -23,18 +23,13 @@
           </div> 
       <%}%>
     <form action="#" method="POST" enctype="multipart/form-data">  
-        <div class="container2" style="overflow-x:auto;">
-            <table class="table">
+        <div class="container2" style="overflow-x:auto; ">
+            <table class="table" style= " width: 100%;">
                 <tr>
-                    <td style="width: 30%;">
+                    <td colspan="2" style="width: 50%">
                         <input type="file" name="pic" style="width: 100%;" class="btn btn-outline-secondary my-2 my-sm-0" required>
-                   
-                        <input type="checkbox" id="duesub" name="duesub">Submission not allowed after due date </td>
-                    <td style="width: 30%;">
-                        <input type="date" style="width: 100%;" name="time" class="btn btn-outline-secondary my-2 my-sm-0" required>
-                        Due date
-                    </td>
-                    <td colspan="2" style="width: 50%;">
+                    </td>                 
+                    <td colspan="2" style="width: auto">
                         <select class="btn btn-outline-secondary my-2 my-sm-0" style="width: 100%; height: 44px;" name="sub" required>
                             <%for(var k=0;k<subData.length;k++){%>
                                 <option><%= subData[k]%></option>
@@ -44,9 +39,20 @@
                     </td>
                 </tr>
                 <tr>
+                    <td style="width: 30%;">
+                        <input type="date" style="width: 100%;" name="time" class="btn btn-outline-secondary my-2 my-sm-0" required>
+                        Due date
+                    </td>
+                    <td>
+                        <input type="checkbox" id="duesub" name="duesub"> 
+                        <label for="duesub">Submission not allowed after due date</label>
+                    </td>
                     <td >
                         <input type="text" name="msg" class="form-control" placeholder="Message if any">
                     </td>
+                </tr>
+                <tr>
+                    
                     <td >
                         <select class="btn btn-outline-secondary my-2 my-sm-0" style=" width: 100%; height: 44px;" name="cour" required>
                             <%for(var l=0;l<courseData.length;l++){%>
@@ -69,7 +75,7 @@
                         Semester
                     </td>
                     <td style="width: 30%;" >
-                        <button class="btn btn-outline-dark my-2 my-sm-0" style="width: 100%;"  type="submit">
+                        <button class="btn btn-outline-dark my-2 my-sm-0" style="width: 100%; height: 45px;"  type="submit">
                             <i class="fas fa-file-upload"></i> Upload</button>
                     </td>
                 </tr>
